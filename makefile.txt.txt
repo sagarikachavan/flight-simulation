@@ -1,0 +1,14 @@
+all: simulate
+
+stimulate: flight1.o mains.o
+    gcc -Wall -o flight1.o mains.o
+
+main.o: mains.c
+    gcc -c -Wall mains.c
+
+misc.o:flight1.c
+    gcc -c -Wall flight1.c
+
+clean:
+     rm mains.o
+     rm flight1.o
